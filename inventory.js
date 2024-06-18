@@ -127,7 +127,7 @@ Inventory.prototype.removeHost = function removeHost(host)
 		var section = self.contents[self.secmap[k]];
 		section.items = section.items.filter(function(i)
 		{
-			return !i.match(host);
+			return i !== host;
 		});
 	});
 };
